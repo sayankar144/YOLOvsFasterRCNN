@@ -1,6 +1,6 @@
 ## 🎥 Demo Video
 
-https://github.com/sayankar144/YOLOvsFasterRCNN/blob/main/output_detected3.mp4 <br>
+**FasterRCNN** [video](https://github.com/sayankar144/YOLOvsFasterRCNN/blob/main/output_detected3.mp4) <br>
 This project uses two object detection models: **(1) Faster R-CNN** and **(2) YOLOv11** for comparative analysis.
 
 This project evaluates both models based on **accuracy (mAP)**, **inference speed (FPS)**, and **model size**.
