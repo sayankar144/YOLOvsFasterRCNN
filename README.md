@@ -98,7 +98,7 @@ The augmentations were selected to simulate realistic camera motion, lighting va
 
 ## 📊 Evaluation Metrics
 - **mAP (Mean Average Precision)**
-- **FPS (Frames Per Second)**
+- **Inference**
 - **Model Size (MB)**
 
 ---
@@ -107,62 +107,22 @@ The augmentations were selected to simulate realistic camera motion, lighting va
 
 ### 🔢 Quantitative Comparison
 
-| Model | mAP (%) | FPS | Model Size |
-|-----|--------|-----|-----------|
-| Faster R-CNN | 72.4 | 5 FPS | 180 MB |
-| YOLO | 68.1 | 32 FPS | 45 MB |
+| Model | mAP (%) | mAP50 (%)| Inference | Model Size |
+|-----|--------|-----|-----------|-----------|
+| Faster R-CNN | 54.78 |74.96 | 0.1166 s/iter | 334 MB |
+| YOLO | 92.8 | 88.5 |32 FPS | 5.23 MB |
 
 > ⚠️ Results may vary depending on hardware and dataset size.
 
 ---
 
-### 🖼 Qualitative Observations
-- Faster R-CNN produces tighter bounding boxes
-- YOLO performs better in crowded scenes
-- YOLO is suitable for real-time deployment
+###  Qualitative Observations
+- Faster R-CNN produces tighter bounding box and more stable output but very heavy and complex model
+- YOLO is not perform better in real time but simple to write code and very light weight
 
 ---
 
-## 🎥 Real-Time Inference
 
-Both models were tested on video streams:
 
-- ✅ YOLO runs in real-time
-- ❌ Faster R-CNN struggles on CPU
 
-Demo videos & GIFs are available in the `demo/` folder.
 
----
-
-## ⚖️ Accuracy vs Speed Trade-Off
-
-| Feature | Faster R-CNN | YOLO |
-|------|-------------|------|
-| Detection Accuracy | ⭐⭐⭐⭐ | ⭐⭐⭐ |
-| Inference Speed | ❌ Slow | ⚡ Fast |
-| Real-Time Use | ❌ | ✅ |
-| Edge Deployment | ❌ | ✅ |
-| Model Complexity | High | Low |
-
----
-
-## 📌 Conclusion
-
-This project demonstrates that:
-
-- **Faster R-CNN** is better suited for applications requiring **high accuracy**
-- **YOLO** is ideal for **real-time and edge-based detection systems**
-
-Model selection should be driven by application constraints such as **latency, accuracy, and computational resources**.
-
----
-
-## 🔮 Future Improvements
-- Feature Pyramid Networks (FPN)
-- Anchor-free detection
-- Model quantization
-- Larger and more diverse datasets
-
----
-
-## 📎 Repository Structure
